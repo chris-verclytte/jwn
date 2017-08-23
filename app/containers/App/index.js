@@ -12,18 +12,42 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import injectSheet from 'react-jss';
+import Header from 'components/Header';
+import 'typeface-titillium-web';
+import 'typeface-lato';
+import 'assets/fonts/jwn/typeface.css';
 
-export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
   static propTypes = {
     children: React.PropTypes.node,
   };
 
   render() {
+    const { classes } = this.props;
+
     return (
-      <div>
-        {React.Children.toArray(this.props.children)}
+      <div className={classes.container}>
+        <Header />
+        <div className={classes.page}>
+          {React.Children.toArray(this.props.children)}
+        </div>
       </div>
     );
   }
 }
+
+App.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default injectSheet({
+  container: {
+    height: '100%',
+  },
+  page: {
+    height: 'calc(100% - 50px)', // Subtract Header's height
+  },
+})(App);

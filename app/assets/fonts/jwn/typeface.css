@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Jwn Icons';
+  src:  url('./jwn.eot?emkarf');
+  src:  url('./jwn.eot?emkarf#iefix') format('embedded-opentype'),
+    url('./jwn.ttf?emkarf') format('truetype'),
+    url('./jwn.woff?emkarf') format('woff'),
+    url('./jwn.svg?emkarf#Convargo') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="jwn-"], [class*=" jwn-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Jwn Icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.jwn-arrow-right:before {
+  content: "\e900";
+}
+.jwn-paper-plane:before {
+  content: "\e901";
+}
+.jwn-arrow-down:before {
+  content: "\e902";
+}

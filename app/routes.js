@@ -20,18 +20,66 @@ export default function createRoutes(store) {
     {
       path: '/',
       name: 'home',
-      getComponent(nextState, cb) {
-        const importModules = Promise.all([
-          import('containers/HomePage'),
-        ]);
-
-        const renderRoute = loadModule(cb);
-
-        importModules.then(([component]) => {
-          renderRoute(component);
-        });
-
-        importModules.catch(errorLoading);
+      getComponent(location, cb) {
+        import('containers/HomePage')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },{
+      path: '/contact',
+      name: 'contact',
+      getComponent(location, cb) {
+        import('containers/Contact')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
+      path: '/projects/chauffeur-prive',
+      name: 'chauffeur-prive',
+      getComponent(location, cb) {
+        import('containers/CP')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
+      path: '/projects/chauffeur-prive/details',
+      name: 'chauffeur-prive-details',
+      getComponent(location, cb) {
+        import('containers/CP/details')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
+      path: '/projects/convargo',
+      name: 'convargo',
+      getComponent(location, cb) {
+        import('containers/Convargo')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
+      path: '/projects/convargo/details',
+      name: 'convargo-details',
+      getComponent(location, cb) {
+        import('containers/Convargo/details')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },{
+      path: '/projects/facebook',
+      name: 'facebook',
+      getComponent(location, cb) {
+        import('containers/Facebook')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
+      path: '/projects/facebook/details',
+      name: 'facebook-details',
+      getComponent(location, cb) {
+        import('containers/Facebook/details')
+          .then(loadModule(cb))
+          .catch(errorLoading);
       },
     }, {
       path: '*',
