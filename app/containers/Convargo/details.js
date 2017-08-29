@@ -13,9 +13,9 @@ import laptopImage from './assets/macbook-convargo-application.png';
 import funnelImage from './assets/funnel.png';
 import recordingImage from './assets/recording.png';
 import heatmapImage from './assets/heatmap.png';
-import profileRemi from './assets/photo-Remi.png';
-import profileYan from './assets/photo-Yan.png';
-import profileAC from './assets/photo-AC.png';
+import profileMax from './assets/photo-max.png';
+import profileYoann from './assets/photo-yoann.png';
+import profileChristophe from './assets/photo-christophe.png';
 import macbookFacebookImage from './assets/macbook-facebook.png';
 import iphoneCPImage from './assets/iphone-chauffeur-prive.png';
 
@@ -138,21 +138,22 @@ class ConvargoDetails extends React.PureComponent { // eslint-disable-line react
             <Recommendation
               name="Maxime Legardez"
               position="CEO & Founder"
-              picture={profileYan}
+              picture={profileMax}
               className={classes.recommendation}
             >
-              "Nos applications mobiles n'avaient pas évolué depuis 2 ans lorsque
-              Jordan est arrivé chez Chauffeur Privé, les attentes étaient donc
-              élevées. Jordan a su parfaitement améliorer l'expérience globale
-              d'utilisation en analysant les principaux points de friction et en
-              ayant une réflexion centrée utilisateur. Son autonomie, sa force de
-              proposition et sa bonne humeur ont été grandement appréciées au sein
-              de l’équipe."
+              "J'ai eu la chance de travailler avec Jordan durant plus d'un an lorsqu'il
+              s'occupait de tout le département UX/UI chez Convargo.
+              Elément clé de l'équipe, Jordan a de grandes qualités sur le plan
+              professionnel et sur le plan humain. Il s'est intégré parfaitement
+              au sein des différents départements. Doté d'une grande pertinence
+              dans sa démarche, il remet sans cesse en question sa réflexion et ses
+              idées pour améliorer l'expérience utilisateur. Sérieux, analytique,
+              rigoureux, il devient vite un collaborateur qui drive le succès d'un projet !"
             </Recommendation>
             <Recommendation
               name="Yoann Gotthilf"
               position="CTO"
-              picture={profileAC}
+              picture={profileYoann}
               className={classes.recommendation}
             >
               "J’ai eu l’occasion de travailler avec Jordan chez Chauffeur-Privé
@@ -167,16 +168,17 @@ class ConvargoDetails extends React.PureComponent { // eslint-disable-line react
             <Recommendation
               name="Yoann Gotthilf"
               position="CTO"
-              picture={profileRemi}
+              picture={profileChristophe}
               className={classes.recommendation}
             >
-              "Nos applications mobiles n'avaient pas évolué depuis 2 ans lorsque
-              Jordan est arrivé chez Chauffeur Privé, les attentes étaient donc
-              élevées. Jordan a su parfaitement améliorer l'expérience globale
-              d'utilisation en analysant les principaux points de friction et en
-              ayant une réflexion centrée utilisateur. Son autonomie, sa force de
-              proposition et sa bonne humeur ont été grandement appréciées au sein
-              de l’équipe."
+              "Jordan est un excellent designer, investi et soucieux du détail.
+              Il sait pousser la réflexion en termes d’UX autant que livrer une UI
+              au design moderne et rafraichissant. C’est également une personne au
+              contact très facile et à l’écoute des remarques de ses collaborateurs
+              (autant utilisateurs finaux que collègues). En tant que développeur,
+              il m’a permis de laisser exprimer ma sensibilité UX/UI avec une vraie
+              écoute et réflexion commune et j’ai énormément apprécié travailler
+              à ses côtés."
             </Recommendation>
           </div>
         </Section>

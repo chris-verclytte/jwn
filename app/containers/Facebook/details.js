@@ -1,19 +1,12 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 import classNames from 'classnames';
-import { FormattedMessage } from 'react-intl';
 import Paragraph from 'components/Paragraph';
 import Section from 'components/Section';
-import LightTitle from 'components/LightTitle';
-import Recommendation from 'components/Recommendation';
 import Project from 'components/Project';
-import messages from './messages';
 import mainImage from './assets/main-image-facebook.png';
 import laptopImage from './assets/macbook-facebook.png';
 import testimonialImage from './assets/medium-jon-moore.png';
-import profileRemi from './assets/photo-Remi.png';
-import profileYan from './assets/photo-Yan.png';
-import profileAC from './assets/photo-AC.png';
 import macbookConvargoImage from './assets/macbook-convargo.png';
 import iphoneCPImage from './assets/iphone-chauffeur-prive.png';
 
