@@ -2,10 +2,10 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import injectSheet from 'react-jss';
 
-const Paragraph = ({ children, classes, className, subTitle, title, ref }) => (
+const Paragraph = ({ children, classes, className, subTitle, title, containerRef }) => (
   <article
     className={className}
-    ref={ref}
+    ref={container => containerRef(container)}
   >
     {title &&
       <div className={classes.title}>{title}</div>
@@ -28,12 +28,12 @@ Paragraph.propTypes = {
   className: PropTypes.string,
   classes: PropTypes.object.isRequired,
   centered: PropTypes.bool,
-  ref: PropTypes.func,
+  containerRef: PropTypes.func,
 };
 
 Paragraph.defaultProps = {
   className: '',
-  ref: () => {},
+  containerRef: () => {},
 };
 
 export default injectSheet({

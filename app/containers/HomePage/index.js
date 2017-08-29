@@ -7,9 +7,24 @@ import Paragraph from 'components/Paragraph';
 import Link from 'components/Link';
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    super(props);
+
+    this.handleCentering = this.handleCentering.bind(this);
+  }
+
   componentDidMount() {
-    console.log(this.page.clientHeight);
-    console.log('paragraph', this.paragraph.clientHeight);
+    this.handleCentering();
+    window.onresize = this.handleCentering;
+  }
+
+  componentWillUnmount() {
+    window.onresize = null;
+  }
+
+  handleCentering() {
+    const marginTop = (this.page.clientHeight / 2) - (this.paragraph.clientHeight / 2);
+    this.props.sheet.getRule('topPositioned').prop('margin-top', marginTop);
   }
 
   render() {
@@ -22,9 +37,9 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
         >
           <Paragraph
             title="It's all about the why"
-            className={classNames(classes.landingParagraph, classes.topPositioned)}
+            className={classNames(classes.topPositioned)}
             centered
-            ref={(element) => { this.paragraph = element; console.log('paragraphElm', element);}}
+            containerRef={(element) => { this.paragraph = element; }}
           >
             UX/UI designer freelance basé à Paris, je marie les
             besoins des utilisateurs et les intérêts des entreprises
@@ -45,7 +60,6 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 HomePage.propTypes = {
   classes: PropTypes.object,
   sheet: PropTypes.object,
-  dispatch: PropTypes.func.isRequired,
 };
 
 export default injectSheet({
@@ -99,4 +113,7 @@ export default injectSheet({
     display: 'inline-block',
     transform: 'rotate(90deg)',
   },
-})(HomePage);
+  topPositioned: {
+    marginTop: 0,
+  },
+}, { link: true })(HomePage);
