@@ -166,8 +166,8 @@ class ConvargoDetails extends React.PureComponent { // eslint-disable-line react
               troisième fois !"
             </Recommendation>
             <Recommendation
-              name="Yoann Gotthilf"
-              position="CTO"
+              name="Christophe Verclytte"
+              position="Developer"
               picture={profileChristophe}
               className={classes.recommendation}
             >
