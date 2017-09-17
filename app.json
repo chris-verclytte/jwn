@@ -1,9 +1,18 @@
 {
   "name": "jwn-portfolio",
-  "env": {},
+  "repository": "https://github.com/chris-verclytte/jwn",
+  "website": "http://www.jordanwarmoes.com",
+  "env": {
+    "NPM_CONFIG_PRODUCTION": {
+      "description": "Required to be set to false since dev dependencies are necessary to build the app",
+      "value": "false",
+      "required": true
+    }
+  },
   "formation": {
     "web": {
-      "quantity": 1
+      "quantity": 1,
+      "command": "npm run start:prod"
     }
   },
   "addons": [],

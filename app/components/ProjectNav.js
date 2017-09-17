@@ -18,7 +18,7 @@ class ProjectNav extends Component {
     this.handleStopScrolling = this.handleStopScrolling.bind(this);
     this.state = {
       isScrolling: false,
-      direction: 'forward',
+      direction: 'bottom',
     };
     this.timer = null;
   }
@@ -39,7 +39,7 @@ class ProjectNav extends Component {
     // cross-browser wheel delta
     const event = window.event || DOMEvent; // old IE support
     const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
-    const direction = delta === 1 ? 'forward' : 'backward';
+    const direction = delta === 1 ? 'top' : 'bottom';
 
     if (!this.state.isScrolling || this.state.direction !== direction) {
       this.setState({
@@ -57,7 +57,7 @@ class ProjectNav extends Component {
       const indexOfPath = STEPS_PATHS.findIndex((path) => this.props.location.pathname === path);
 
       // Compute next path
-      let nextPathIndex = (this.state.direction === 'forward') ?
+      let nextPathIndex = (this.state.direction === 'bottom') ?
         indexOfPath + 1 : indexOfPath - 1;
       if (nextPathIndex < 0) nextPathIndex = STEPS_PATHS.length - 1;
       else if (nextPathIndex === STEPS_PATHS.length) nextPathIndex = 0;
