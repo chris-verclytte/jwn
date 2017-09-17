@@ -37,7 +37,7 @@ module.exports = (options) => ({
           loader: 'image-webpack-loader',
           query: {
             progressive: true,
-            optimizationLevel: 5,
+            optimizationLevel: 2,
             interlaced: false,
             pngquant: {
               quality: '65-90',
